@@ -52,7 +52,8 @@ gulp.task('connect', function() {
     });
   });
  
-  gulp.watch(['*.php', 'dist/css/*.css', 'dist/js/*.js']).on('change', function () {
+  gulp.watch(['*.html', 'dist/css/*.css', 'dist/js/*.js']).on('change', function () {
+    runSequence('clean', ['scripts', 'css'], cb);
     browserSync.reload();
   });
 });
