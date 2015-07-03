@@ -43,6 +43,8 @@ gulp.task('css', function(){
     .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('js-watch', ['scripts', 'css'], browserSync.reload);
+
 
 // Serve the project and set up browser sync
 gulp.task('connect', function() {
@@ -52,8 +54,8 @@ gulp.task('connect', function() {
     });
   });
  
-  gulp.watch(['*.html', 'dist/css/*.css', 'dist/js/*.js']).on('change', function () {
-    runSequence('clean', ['scripts', 'css'], cb);
+  gulp.watch(['js/*.js','css/*.css'], ['js-watch']);
+  gulp.watch(['*.html']).on('change', function () {
     browserSync.reload();
   });
 });

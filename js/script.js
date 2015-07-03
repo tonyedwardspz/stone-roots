@@ -1,7 +1,7 @@
 var welcomeMessage = "Function called on ready";
 
 
-// called once the document has fully loaded
+// Called once the document has fully loaded
 $(document).ready(function(){
 	console.log("Ready");
 
@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 
-// called when the browser window resizes
+// Called when the browser window resizes
 $(window).resize(function(){
 	console.log('Resize')
 });
