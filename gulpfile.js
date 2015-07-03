@@ -49,11 +49,12 @@ gulp.task('js-watch', ['scripts', 'css'], browserSync.reload);
 // Serve the project and set up browser sync
 gulp.task('connect', function() {
   connect.server({}, function (){
-    browserSync({
-      proxy: 'localhost:8000'
+    browserSync.init({
+			server: {
+					baseDir: "./"}
     });
   });
- 
+
   gulp.watch(['js/*.js','css/*.css'], ['js-watch']);
   gulp.watch(['*.html']).on('change', function () {
     browserSync.reload();
