@@ -19,9 +19,14 @@
 
 	<h1>This is the stone roots website</h1>
 
-	<p>This is some stone roots text<p>
-
-
+  <!-- Note these are only place holder images until the HI RES pic is sourced -->
+  <!-- MJC Need to fiddle with this to use the viewport sizes -->
+  <picture>
+    <source media="(min-width: 650px)" srcset="images/stone-roots-paint-the-town.jpg" alt="Stone Roots Image">
+    <source media="(min-width: 465px)" srcset="images/stone-roots-band.jpg" alt="Stone Roots Image">
+    <!-- img tag for browsers that do not support picture element -->
+    <img src="images/stone-roots-disc.jpg" alt="Stone Disc">
+  </picture>
 
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
