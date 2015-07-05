@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Stone Roots</title>
   <meta name="description" content="The Stone Roots">
 
@@ -21,12 +21,11 @@
   <!-- Note these are only place holder images until the HI RES pic is sourced -->
   <!-- MJC Need to fiddle with this to use the viewport sizes -->
   <picture>
-    <source media="(min-width: 650px)" srcset="images/stone-roots-paint-the-town.jpg" alt="Stone Roots Image">
-    <source media="(min-width: 465px)" srcset="images/stone-roots-band.jpg" alt="Stone Roots Image">
+    <source media="(min-width: 650px)" srcset="images/stone-roots-paint-the-town.jpg" alt="Stone Roots Image" sizes="100vw">
+    <source media="(min-width: 465px)" srcset="images/stone-roots-band.jpg" alt="Stone Roots Image" sizes="100vw">
     <!-- img tag for browsers that do not support picture element -->
-    <img src="images/stone-roots-disc.jpg" alt="Stone Disc">
+    <img src="images/stone-roots-disc.jpg" alt="Stone Disc" sizes="100vw">
   </picture>
-
 
   <!-- MJC THIS IS EXAMPLE TO USE FOR VIEW PORT when we have the image
 
@@ -43,6 +42,20 @@
                  lighthouse-640.jpg 640w,
                  lighthouse-1280.jpg 1280w">
   </picture> -->
+
+  <!-- MJC This gives source to normal AND HD images at 3 different resolutions to support hd mobile etc
+       default is small as this is se for mobile (whcih we will have)
+       
+
+  <picture>
+    <source media=”(min-width: 45em)” srcset=”large.jpg, large-hd.jpg 2x”>
+    <source media=”(min-width: 18em)” srcset=”medium.jpg, medium-hd.jpg 2x”>
+    <source srcset=”small.jpg, small-hd.jpg 2x”>
+    <img src=”small.jpg” alt=”Robert Anton Wilson laughing” >
+</picture>
+-->
+
+
 
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
