@@ -22,7 +22,7 @@ h1 {
 	letter-spacing: .05em;
 }
 
-foottxt{
-	font-family: "Lucida Console", "Courier New", monospace;
-	letter-spacing: .05em;
-}
+img {
+    max-width: 100%;
+    height: auto;
+    }
