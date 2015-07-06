@@ -6,59 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Stone Roots</title>
   <meta name="description" content="The Stone Roots">
-
+  <!--STYLE SHEETS-->
   <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
 </head>
 
 <body>
-  <h1>This is the stone roots website</h1>
+  <div class="container">
+    <h1>This is the stone roots website</h1>
 
-  <!-- Note these are only place holder images until the HI RES pic is sourced -->
-  <!-- MJC Need to fiddle with this to use the viewport sizes -->
-  <picture>
-    <source media="(min-width: 650px)" srcset="images/stone-roots-paint-the-town.jpg" alt="Stone Roots Image" sizes="100vw">
-    <source media="(min-width: 465px)" srcset="images/stone-roots-band.jpg" alt="Stone Roots Image" sizes="100vw">
-    <!-- img tag for browsers that do not support picture element -->
-    <img src="images/stone-roots-disc.jpg" alt="Stone Disc" sizes="100vw">
+    <!-- Note these are only place holder images until the HI RES pic is sourced -->
+    <!-- MJC Need to fiddle with this to use the viewport sizes -->
+    <picture>
+      <source media="(min-width: 650px)" sizes = "100vw" srcset="images/stone-roots-paint-the-town.jpg" alt="Stone Roots Image" >
+      <source media="(min-width: 465px)" sizes = "100vw" srcset="images/stone-roots-band.jpg" alt="Stone Roots Image">
+      <!-- img tag for browsers that do not support picture element -->
+      <img src="images/stone-roots-disc.jpg" alt="Stone Disc" >
+    </picture>
+
+    <!-- MJC THIS IS EXAMPLE TO USE FOR VIEW PORT when we have the image
+    <picture>
+      <source media="(min-width: 800px)"
+              sizes="80vw"
+              srcset="lighthouse-landscape-640.jpg 640w,
+                      lighthouse-landscape-1280.jpg 1280w,
+                      lighthouse-landscape-2560.jpg 2560w">
+      <img src="lighthouse-160.jpg" alt="lighthouse"
+           sizes="80vw"
+           srcset="lighthouse-160.jpg 160w,
+                   lighthouse-320.jpg 320w,
+                   lighthouse-640.jpg 640w,
+                   lighthouse-1280.jpg 1280w">
+    </picture> -->
+
+    <!-- ****** MJC This gives source to normal AND HD images at 3 different resolutions to support hd mobile etc
+         default is small as this is se for mobile (whcih we will have)
+
+    <picture>
+      <source media=”(min-width: 45em)” srcset=”large.jpg, large-hd.jpg 2x”>
+      <source media=”(min-width: 18em)” srcset=”medium.jpg, medium-hd.jpg 2x”>
+      <source srcset=”small.jpg, small-hd.jpg 2x”>
+      <img src=”small.jpg” alt=”Robert Anton Wilson laughing” >
   </picture>
+  -->
+    <!--FOOTER-->
+    <footer class="row">
+      <hr>
+      <div class="col-sm-6 col-md-3">
+        <div class="row">
+          <a href="https://www.facebook.com/StoneRootsUK" title="Facebook"  target="_blank" title="Facebook">
+            <span class="fa-stack fa-2x">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+             <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+          </a>
 
-  <!-- MJC THIS IS EXAMPLE TO USE FOR VIEW PORT when we have the image
+          <a href="https://plus.google.com/108077143535226223632/posts" title="Google Plus" target="_blank" title="Google Plus">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-google-plus fa-stack-1x"></i>
+            </span>
+          </a>
 
-  <picture>
-    <source media="(min-width: 800px)"
-            sizes="80vw"
-            srcset="lighthouse-landscape-640.jpg 640w,
-                    lighthouse-landscape-1280.jpg 1280w,
-                    lighthouse-landscape-2560.jpg 2560w">
-    <img src="lighthouse-160.jpg" alt="lighthouse"
-         sizes="80vw"
-         srcset="lighthouse-160.jpg 160w,
-                 lighthouse-320.jpg 320w,
-                 lighthouse-640.jpg 640w,
-                 lighthouse-1280.jpg 1280w">
-  </picture> -->
+          <a href="https://twitter.com/stonerootsuk" target="_blank" title="Twitter">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div> <!--CONTAINER-->
 
-  <!-- MJC This gives source to normal AND HD images at 3 different resolutions to support hd mobile etc
-       default is small as this is se for mobile (whcih we will have)
-       
-
-  <picture>
-    <source media=”(min-width: 45em)” srcset=”large.jpg, large-hd.jpg 2x”>
-    <source media=”(min-width: 18em)” srcset=”medium.jpg, medium-hd.jpg 2x”>
-    <source srcset=”small.jpg, small-hd.jpg 2x”>
-    <img src=”small.jpg” alt=”Robert Anton Wilson laughing” >
-</picture>
--->
-
-
-
-
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="dist/js/script.js"></script>
-</body>
+
+  </body>
 </html>
