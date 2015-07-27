@@ -3,9 +3,9 @@ var welcomeMessage = "Function called on ready";
 
 // Called once the document has fully loaded
 $(document).ready(function(){
-	console.log("Ready");
-
 	welcome(welcomeMessage);
+
+	$.backstretch("images/stone-roots-home.jpg");
 });
 
 
