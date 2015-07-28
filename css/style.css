@@ -33,3 +33,12 @@ picture {
     left: 0;
     z-index: -1;
 }
+
+/* position social icons bottom left */
+.icon-position{
+  max-width:100%;
+  z-index: -100;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
