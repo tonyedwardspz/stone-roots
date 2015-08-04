@@ -2,10 +2,18 @@ var welcomeMessage = "Function called on ready";
 
 
 // Called once the document has fully loaded
-$(document).ready(function(){
-	welcome(welcomeMessage);
+$(document).ready(
+	function(){ 	welcome(welcomeMessage);
 
-	$.backstretch("images/stone-roots-home.jpg");
+		if (window.innerWidth < 480) {
+					        $.backstretch("images/stone-roots-paint-the-town.jpg");
+					    }
+		else if ( window.innerWidth <= 768) {
+					        $.backstretch("images/stone-roots-band.jpg");
+					    }
+		else if   ( window.innerWidth > 768) {
+										  			$.backstretch("images/stone-roots-home.jpg");
+							}
 });
 
 
