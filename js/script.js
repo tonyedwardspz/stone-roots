@@ -23,10 +23,10 @@ var welcome = function(msg){
 function applyBackstretchImg() {
 	// apply different image depending on if phone/tablet/other
 	if (window.innerWidth < 480) {
-								$.backstretch("images/stone-roots-paint-the-town.jpg");
+								$.backstretch("images/stone-roots-mobile.jpg");
 						}
 	else if ( window.innerWidth <= 768) {
-								$.backstretch("images/stone-roots-band.jpg");
+								$.backstretch("images/stone-roots-tablet.jpg");
 						}
 	else if   ( window.innerWidth > 768) {
 													$.backstretch("images/stone-roots-home.jpg");
