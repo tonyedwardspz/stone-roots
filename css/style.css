@@ -87,6 +87,13 @@ picture {
               border-color 0.3s ease-in;
 }
 
+.ghost-button span,
+.ghost-button:hover span,
+.ghost-button:hover span:hover,
+.ghost-button span:hover{
+  opacity: 1;
+}
+
 
 /* Small form mobile phones and down */
 @media only screen and (max-width : 768px) {
