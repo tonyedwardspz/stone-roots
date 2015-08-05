@@ -1,6 +1,7 @@
 // Called once the document has fully loaded
 $(document).ready(function() {
 	applyBackstretchImage();
+	setFitText();
 });
 
 
@@ -35,4 +36,10 @@ var isPortrait = function() {
 // Returns true/false
 var isTouchDevice = function() {
   return 'ontouchstart' in window || 'onmsgesturechange' in window; 
+}
+
+
+// Apply fit-text to title
+var setFitText = function() {
+	$("#home-title").fitText()
 }
