@@ -41,5 +41,5 @@ var isTouchDevice = function() {
 
 // Apply fit-text to title
 var setFitText = function() {
-	$("#home-title").fitText()
+	$("#home-title").fitText();
 }
