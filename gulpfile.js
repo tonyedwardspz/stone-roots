@@ -22,15 +22,9 @@ gulp.task('clean', function () {
 
 // Concatenate and minify js
 gulp.task('scripts', function() {
-	return gulp.src(['js/*.js'])
-	  .pipe(concat('script.js'))
-	  .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('buildScripts', function() {
   return gulp.src(['js/*.js'])
     .pipe(concat('script.js'))
-    .pipe(stripDebug())
+    //.pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
@@ -68,14 +62,6 @@ gulp.task('connect', function() {
 gulp.task('default', function(callback) {
   runSequence('clean',
               ['scripts','css'],
-              'connect',
-              callback);
-});
-
-// Build deployment version. Call from the command line using 'gulp build'
-gulp.task('build', function(callback) {
-  runSequence('clean',
-              ['buildsScripts','css'],
               'connect',
               callback);
 });
