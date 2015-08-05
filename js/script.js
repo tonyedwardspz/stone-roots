@@ -1,10 +1,13 @@
-var orientation = "";
+var orientation = "",
+		isTouchDevice;
 
 
 // Called once the document has fully loaded
 $(document).ready(function() { 	
 	detectOrientation();
 	applyBackstretchImg();
+
+	isTouchDevice = detectTouchDevice();
 });
 
 
@@ -48,4 +51,10 @@ var detectOrientation = function() {
 			orientation = "landscape"
 		}
 	});
+}
+
+
+// Determins if touch features are available. Return true/false
+var detectTouchDevice = function() {
+  return 'ontouchstart' in window || 'onmsgesturechange' in window; 
 }
