@@ -2,7 +2,7 @@ var welcomeMessage = "Function called on ready";
 
 
 // Called once the document has fully loaded
-$(document).ready( function(){ 	
+$(document).ready(function(){ 	
 		welcome(welcomeMessage);
 
 		//determine backstretch image
@@ -13,6 +13,7 @@ $(document).ready( function(){
 // Called when the browser window resizes
 $(window).resize(function(){
 	console.log('Resize')
+	applyBackstretchImg();
 });
 
 
