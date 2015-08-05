@@ -84,3 +84,15 @@ picture {
     border-top-color: #1b435e;
     background: #1b435e;
 }
+
+
+/* Small form mobile phones and down */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones  and down */ 
+@media only screen and (max-width : 480px) {
+
+}
+
