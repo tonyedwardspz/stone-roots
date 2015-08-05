@@ -1,25 +1,17 @@
-var orientation = "",
-		isTouchDevice;
-
-
 // Called once the document has fully loaded
-$(document).ready(function() { 	
-	detectOrientation();
-	applyBackstretchImg();
-
-	isTouchDevice = detectTouchDevice();
+$(document).ready(function() {
+	applyBackstretchImage();
 });
 
 
 // Called when the browser window resizes
 $(window).resize(function() {
-	detectOrientation();
-	applyBackstretchImg();
+	applyBackstretchImage();
 });
 
 
 // apply different image depending on screen width
-var applyBackstretchImg = function() {
+var applyBackstretchImage = function() {
 	if (window.innerWidth < 480) {
 		$.backstretch("images/stone-roots-mobile.jpg");
 	}
@@ -33,28 +25,12 @@ var applyBackstretchImg = function() {
 
 
 // Use match media for orientation detection.
-var detectOrientation = function() {
-	var mql = window.matchMedia("(orientation: portrait)");
-
-	if(mql.matches) {
-		orientation = "portrait"
-	} else {
-		orientation = "landscape"
-	}
-
-	// Add a media query change listener
-	mql.addListener(function(m) {
-		if(m.matches) {
-			orientation = "portrait"
-		}
-		else {
-			orientation = "landscape"
-		}
-	});
+var isPortrait = function() {
+	return window.matchMedia("(orientation: portrait)").matches;
 }
 
 
 // Determins if touch features are available. Return true/false
-var detectTouchDevice = function() {
+var isTouchDevice = function() {
   return 'ontouchstart' in window || 'onmsgesturechange' in window; 
 }
