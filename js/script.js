@@ -25,12 +25,14 @@ var applyBackstretchImage = function() {
 
 
 // Use match media for orientation detection.
+// Returns true if portait
 var isPortrait = function() {
 	return window.matchMedia("(orientation: portrait)").matches;
 }
 
 
-// Determins if touch features are available. Return true/false
+// Determins if touch features are available.
+// Returns true/false
 var isTouchDevice = function() {
   return 'ontouchstart' in window || 'onmsgesturechange' in window; 
 }
