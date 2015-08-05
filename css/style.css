@@ -47,43 +47,41 @@ picture {
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
     margin-bottom: 20px;
 }
 
 .container{
     height: 100%;
+    margin: 0 auto;
 }
-
 
 .btn-centre{
     text-align: center;
 }
 
-.button {
-    position: relative;
-    border-top: 1px solid #96d1f8;
-    background: #65a9d7;
-    padding: 11px 22px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    color: white;
-    font-size: 16px;
-    font-family: DolceVita, "Lucida Console", "Courier New", monospace;
+.ghost-button {
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
     text-decoration: none;
-    vertical-align: middle;
+    border-radius: 5px;
+    font-family: DolceVita, "Lucida Console", "Courier New", monospace;
+    transition: background-color 0.2s ease-out,
+                border-color 0.2s ease-out;
 }
 
-.button:hover {
-    border-top-color: #28597a;
-    background: #28597a;
-    color: #ccc;
-}
-
-.button:active {
-    border-top-color: #1b435e;
-    background: #1b435e;
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
 }
 
 
