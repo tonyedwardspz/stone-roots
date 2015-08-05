@@ -31,7 +31,7 @@ h2 {
 
 
 /* position social icons bottom left */
-.icon-position{
+.icon-wrapper{
     width:100%;
     text-align: center;
     position: fixed;
